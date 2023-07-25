@@ -4,8 +4,7 @@ const useLocalStorage = (key, defaultValue) => {
 
   const setStoredData = setItem => {
     try {
-      if (setItem.length > 0)
-        localStorage.setItem(key, JSON.stringify(setItem));
+      localStorage.setItem(key, JSON.stringify(setItem));
     } catch (err) {
       console.log(err);
     }
